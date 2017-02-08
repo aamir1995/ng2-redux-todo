@@ -1,0 +1,92 @@
+<h1>Siginup...</h1>
+<!--<navlogin></navlogin>
+<div class="container">
+	<md-card class="demo-card demo-basic" style="text-align: center">
+<md-card-content>
+	<form #f="ngForm" (ngSubmit)="onSubmit(f.valid, f.value)" novalidate>
+		<div>
+			<md-input-container [dividerColor]="!userId.touched || (!userId.valid || userId.pristine) ? 'warn':'primary'">
+				<input type="text" #userId="ngModel" pattern="[a-zA-Z][a-zA-Z0-9-_\.]{3,10}" name="userId" [(ngModel)]="uId" (ngModelChange)="onChange($event, userId);"
+					placeholder="User ID" required md-input>
+			</md-input-container>
+			<br>
+			<small [hidden]="!userId.errors?.pattern?.requiredPattern || (userId.pristine && !f._submitted)">
+						No Space or Special character, length Only 3 to 10.
+					</small>
+			<small [hidden]="!userId.errors?.required || (userId.pristine && !f._submitted)" class="alert alert-danger">
+						<br>
+							User Id is required, length Only 3 to 10.
+           			 </small>
+			<small [hidden]="userId?.checkUserId || (userId.pristine && !f._submitted)">
+							<br>
+                    User Id is Not Available.
+            		</small>
+			<br>
+		</div>
+		<div>
+			<md-input-container [dividerColor]="(!email.valid || email.pristine) ? 'warn':'primary'">
+				<input class="md-input" type="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email" [(ngModel)]="eml"
+					placeholder="Email Address" required md-input>
+			</md-input-container>
+			<br>
+			<small [hidden]="email.valid || (!email.touched && !f._submitted)" class="alert alert-danger">
+                    	Email is required.
+            		</small>
+			<small [hidden]="!email.errors?.pattern || (email.pristine && !f._submitted)" class="alert alert-danger">
+							<br>
+                    	Please type a valid email.
+            		</small>
+		</div>
+		<div>
+			<md-input-container [dividerColor]="(!fName.valid || fName.pristine) ? 'warn':'primary'">
+				<input class="md-input" type="text" #fName="ngModel" name="fName" [(ngModel)]="fname" placeholder="First Name" style="padding-top:20px" required md-input>
+</md-input-container>
+<br>
+<small [hidden]="fName.valid || (fName.pristine && !f._submitted)" class="alert alert-danger">
+                    	First Name is required.
+            		</small>
+</div>
+<div>
+	<md-input-container [dividerColor]="(!lName.valid || lName.pristine) ? 'warn':'primary'">
+		<input style="padding-top:20px" class="md-input" type="text" #lName="ngModel" name="lName" [(ngModel)]="lname" placeholder="Last Name" required md-input>
+</md-input-container>
+<br>
+<small [hidden]="lName.valid || (lName.pristine && !f._submitted)" class="alert alert-danger">
+                    	Last Name is required.
+            		</small>
+</div>
+<div>
+	<md-input-container [dividerColor]="(!password.valid || password.pristine) ? 'warn':'primary'">
+		<input style="padding-top:20px" class="md-input" type="password" #password="ngModel" name="password" [(ngModel)]="pwd" validateEqual="cpassword" reverse="true"
+placeholder="Password" minlength="6" required md-input>
+</md-input-container>
+<br>
+<small [hidden]="!password.errors?.required || (password.pristine && !f._submitted)" class="alert alert-danger">
+                    	Password is required.
+					</small>
+<small [hidden]="password.valid || (password.pristine && !f._submitted)" class="alert alert-danger">
+						<br>
+                    		Password should be minimum 6 characters long.
+					</small>
+</div>
+<div>
+	<md-input-container [dividerColor]="(!cpassword.valid || cpassword.pristine) ? 'warn':'primary'">
+		<input style="padding-top:20px" class="md-input" type="password" #cpassword="ngModel" name="cpassword" [(ngModel)]="cpwd" validateEqual="password" reverse="false"
+placeholder="Confirm Password" required md-input>
+</md-input-container>
+<br>
+<small [hidden]="cpassword.valid || (cpassword.pristine && !f.submitted)" class="alert alert-danger">
+					Password mismatched
+   				   </small>
+<br>
+<small [hidden]="!cpassword.errors?.required || (cpassword.pristine && !f._submitted)" class="alert alert-danger">
+                    	Confirm Password is required.
+            		</small>
+</div>
+<div>
+	<button class="md-raised-button" md-raised-button type="submit" [disabled]="!userId.valid || ! email.valid || !fName.valid || !lName.valid || !password.valid || !cpassword.valid">SignUp</button>
+	<loader [show]="(isLoading$ | async)" [type]="'small'" [isForFullPage]="false"></loader>
+</div>
+</form>
+</md-card-content>
+</md-card>-->

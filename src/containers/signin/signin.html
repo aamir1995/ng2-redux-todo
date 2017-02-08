@@ -1,0 +1,26 @@
+<h1>Sigin in</h1>
+<!--<div class="container">
+	<md-card style="text-align: center;" class="demo-card demo-basic">
+<md-card-content>
+	<form novalidate #f="ngForm" (ngSubmit)="onSubmit(f.valid, f.value)">
+		<md-input-container [dividerColor]="(!password.valid || password.pristine) ? 'warn':'primary'">
+			<input #email="ngModel" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)]="eml" placeholder="Email"
+				required md-input>
+		</md-input-container>
+		<br>
+		<small [hidden]="!email.errors?.pattern || (email.pristine && !f._submitted)" class="alert alert-danger">
+                    	Please type a valid email.
+            	</small>
+		<br>
+		<md-input-container [dividerColor]="(!password.valid || password.pristine) ? 'warn':'primary'">
+			<input style="padding-top:20px" type="password" #password="ngModel" name="password"  [(ngModel)]="pwd" placeholder="Password" required md-input>
+</md-input-container>
+<br>
+<small [hidden]="password.valid || (password.pristine && !f._submitted)" class="alert alert-danger">     </small>
+<button class="md-raised-button" [disabled]="!email.valid || ! password.valid" type="submit" md-raised-button> SignIn </button>
+<loader [show]="loader" [type]="'small'" [isForFullPage]="false"></loader>
+<button routerLink="/forgot" class="md-button" md-button>FORGOT PASSWORD</button>
+</form>
+</md-card-content>
+</md-card>
+</div>-->
