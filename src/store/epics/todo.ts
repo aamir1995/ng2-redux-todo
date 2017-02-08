@@ -15,9 +15,8 @@ export class TodoEpics {
         action$.ofType(TodoActions.FETCH_TODO)
             .switchMap(() => {
                 console.log("FECTH_TODO frm EPIC");
-                return this.af.database.list('todos')
+                return this.af.database.list('todos/')
             }).switchMap(todo => {
-
                 return Observable.from(todo)
                     .map((ele) => {
                         return {
@@ -25,15 +24,15 @@ export class TodoEpics {
                             payload: ele
                         }
                     })
-
-                // console.log("from fetch epic ", todo);
-                // return todo.map(ele => {
-                //     console.log("single Todo", ele);
-                //     return {
-                //         type: TodoActions.FETCH_TODO_SUCCESS,
-                //         payload: ele
-                //     }
-                // })
             });
 
+    removeTodoFromDb = (action$) =>
+        action$.ofType(TodoActions.DEL_TODO)
+            .switchMap(({payload}) => {
+                console.log("DEL_TODO frm EPIC " + payload);
+                return this.af.database.list('todos/').remove(payload)
+                    .then(() => {
+                        return { type: TodoActions.DEL_TODO_SUCCESS }
+                    })
+            });
 }

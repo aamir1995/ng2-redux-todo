@@ -53,7 +53,8 @@ export class StoreModule {
     private te: TodoEpics,
   ) {
     const middleware = [
-      createEpicMiddleware(this.te.saveTodoToDb)
+      createEpicMiddleware(this.te.saveTodoToDb),
+      createEpicMiddleware(this.te.removeTodoFromDb)
     ];
     this.ngRedux.configureStore(
       AppReducer,                                         // Main Reducer

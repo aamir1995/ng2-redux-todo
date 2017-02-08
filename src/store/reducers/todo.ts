@@ -17,11 +17,12 @@ export const TodoReducer = function (state: IInitalState = InitalState, action: 
             let obj = state.todo;
             obj[action.payload.$key] = action.payload;
             return Object.assign({}, state, { todo: obj });
-        // case TodoActions.DEL_TODO:
-        //     console.log('case TodoActions.DEL_TODO', action.payload, state.todo.indexOf(action.payload));
-        //     let rmvTodos = state.todo.splice(state.todo.indexOf(action.payload), 1);
-        //     let newState = [...state.todo];
-        //     return Object.assign({}, state, { todo: newState });
+        case TodoActions.DEL_TODO_SUCCESS:
+            console.log('case TodoActions.DEL_TODO_SUCCESS', action.payload, state.todo[action.payload]);
+            delete state.todo[action.payload];
+            return Object.assign({}, state);
+        // let newState = [...state.todo];
+        // return Object.assign({}, state, { todo: newState });
         default:
             return state;
     };

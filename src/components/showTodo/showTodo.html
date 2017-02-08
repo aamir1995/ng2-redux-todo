@@ -1,2 +1,2 @@
-<li>{{todo | json}}</li>
-<button (click)="delTodo(todo)">Remove</button>
+<li>{{todo.todo}}</li>
+<button (click)="delTodo(todo.$key)">Remove</button>

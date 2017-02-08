@@ -14,7 +14,7 @@ export class ShowTodoComponent {
         console.log(changes);
     }
 
-    delTodo(todo) {
-        this.DelTodo.emit(todo);
+    delTodo(key) {
+        this.DelTodo.emit(key);
     }
 }

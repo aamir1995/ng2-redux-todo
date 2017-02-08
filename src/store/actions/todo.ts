@@ -8,6 +8,7 @@ export class TodoActions {
     static FETCH_TODO: string = 'ADD_TODO';
     static FETCH_TODO_SUCCESS: string = 'ADD_TODO_SUCCESS';
     static DEL_TODO: string = 'DEL_TODO';
+    static DEL_TODO_SUCCESS: string = 'DEL_TODO_SUCCESS';
 
     constructor(private ngRedux: NgRedux<IAppState>) { }
 
@@ -18,11 +19,11 @@ export class TodoActions {
         });
     };
 
-    removeTodo(todo) {
-        console.log("remove todo dispatcher", todo);
+    removeTodo(key) {
+        console.log("remove todo dispatcher", key);
         this.ngRedux.dispatch({
             type: TodoActions.DEL_TODO,
-            payload: todo
+            payload: key
         });
     };
 
