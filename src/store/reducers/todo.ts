@@ -18,7 +18,7 @@ export const TodoReducer = function (state: IInitalState = InitalState, action: 
             obj[action.payload.$key] = action.payload;
             return Object.assign({}, state, { todo: obj });
         case TodoActions.DEL_TODO_SUCCESS:
-            console.log('case TodoActions.DEL_TODO_SUCCESS', action.payload, state.todo[action.payload]);
+            console.log('case TodoActions.DEL_TODO_SUCCESS', state, action.payload, state.todo[action.payload]);
             delete state.todo[action.payload];
             return Object.assign({}, state);
         // let newState = [...state.todo];

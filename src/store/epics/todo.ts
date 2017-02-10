@@ -20,8 +20,8 @@ export class TodoEpics {
                 return Observable.from(todo)
                     .map((ele) => {
                         return {
-                            type: TodoActions.FETCH_TODO_SUCCESS,
-                            payload: ele
+                            'type': TodoActions.FETCH_TODO_SUCCESS,
+                            'payload': ele
                         }
                     })
             });
@@ -32,7 +32,7 @@ export class TodoEpics {
                 console.log("DEL_TODO frm EPIC " + payload);
                 return this.af.database.list('todos/').remove(payload)
                     .then(() => {
-                        return { type: TodoActions.DEL_TODO_SUCCESS }
+                        return { 'type': TodoActions.DEL_TODO_SUCCESS, 'payload': payload }
                     })
             });
 }
