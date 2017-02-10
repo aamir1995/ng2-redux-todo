@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FirebaseService } from '../../providers'
 import { Observable, select, CounterActions, TodoActions } from '../../store';
-// import 'rxjs/add/operator/distinctUntilChnaged';
 
 @Component({
   selector: 'home',

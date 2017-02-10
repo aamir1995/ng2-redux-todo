@@ -10,11 +10,8 @@ import { Observable, select, AuthActions } from '../../store';
 })
 export class SignupContainer {
     @select(['auth', 'isRegistered']) isRegistered$: Observable<boolean>;
-    @select(['auth', 'isLoading']) isLoading$: Observable<boolean>;
     @select(['auth', 'isError']) isError$: Observable<any>;
 
-    uId$: BehaviorSubject<string>;
-    userId: any = { 'checkUserId': false };
     emailRegx: RegExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
     constructor(private router: Router) { }

@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 export class SigninContainer implements OnInit {
 
   constructor(private router: Router) {
-    // this.loader = true;
   }
 
   ngOnInit() { }
