@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { APP_BASE_HREF } from '@angular/common';
 import { NgReduxModule } from 'ng2-redux';
-import { MaterialModule } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
 import { MomentModule } from 'angular2-moment';
 import { StoreModule } from '../store';
@@ -14,7 +13,6 @@ import { ApplicationComponents, AppRoutes } from './routes';
 import { providers } from '../providers';
 import { Pipes } from "../pipes"
 import { appConfig } from './appConfig';
-import { EqualValidator } from '../directives/equal-validator.directive';
 
 @NgModule({
   imports: [
@@ -24,11 +22,10 @@ import { EqualValidator } from '../directives/equal-validator.directive';
     , HttpModule
     , NgReduxModule
     , StoreModule
-    , MaterialModule.forRoot()
     , AngularFireModule.initializeApp(appConfig.config.firebaseConfig, appConfig.config.firebaseAuthConfig)
     , MomentModule
   ]
-  , declarations: [RootContainer, EqualValidator, ...ApplicationComponents, ...Pipes]
+  , declarations: [RootContainer, ...ApplicationComponents, ...Pipes]
   , providers: [...providers]
   , entryComponents: []
   , bootstrap: [RootContainer]
