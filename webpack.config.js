@@ -35,6 +35,14 @@ module.exports = {
       app: {
         environment: JSON.stringify(process.env.APP_ENVIRONMENT || 'development')
       }
+    }),
+    new ProvidePlugin({
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      $: 'jquery',
+      'window.$': 'jquery',
+      Tether: "tether",
+      "window.Tether": 'tether',
     })
   ],
   tslint: {

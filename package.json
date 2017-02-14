@@ -24,6 +24,7 @@
     "@types/moment": "2.13.0",
     "angular2-moment": "1.0.0-beta.rc.1",
     "angularfire2": "2.0.0-beta.6",
+    "bootstrap": "^4.0.0-alpha.6",
     "core-js": "2.4.1",
     "firebase": "3.6.0",
     "loaders.css": "^0.1.2",
@@ -33,6 +34,7 @@
     "reflect-metadata": "0.1.8",
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.39",
+    "tether": "^1.4.0",
     "zone.js": "0.6.25"
   },
   "devDependencies": {
