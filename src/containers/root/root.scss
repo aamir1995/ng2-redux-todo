@@ -1,22 +1,9 @@
 @import 'node_modules/bootstrap/dist/css/bootstrap';
+@import 'node_modules/tether/dist/css/tether';
 // @import 'node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css';
 // @import "node_modules/ng2-material/ng2-material.css";
 // @import "node_modules/ng2-material/font/font.css";
 // @import "node_modules/loaders.css/loaders.css";
-// h1 {
-//     background: red;
-// }
-// body {
-//     background: green;
-// }
-
-/*
- * Globals
- */
-
-
-/* Links */
-
 a,
 a:focus,
 a:hover {
@@ -85,50 +72,6 @@ body {
 
 
 /*
- * Header
- */
-
-.masthead {
-    margin-bottom: 2rem;
-}
-
-.masthead-brand {
-    margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-    padding: .25rem 0;
-    font-weight: bold;
-    color: rgba(255, 255, 255, .5);
-    background-color: transparent;
-    border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-    border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link+.nav-link {
-    margin-left: 1rem;
-}
-
-.nav-masthead .active {
-    color: #fff;
-    border-bottom-color: #fff;
-}
-
-@media (min-width: 48em) {
-    .masthead-brand {
-        float: left;
-    }
-    .nav-masthead {
-        float: right;
-    }
-}
-
-
-/*
  * Cover
  */
 
@@ -156,11 +99,6 @@ body {
  */
 
 @media (min-width: 40em) {
-    /* Pull out the header and footer */
-    .masthead {
-        position: fixed;
-        top: 0;
-    }
     .mastfoot {
         position: fixed;
         bottom: 0;
@@ -169,8 +107,8 @@ body {
     .site-wrapper-inner {
         vertical-align: middle;
     }
+    ;
     /* Handle the widths */
-    .masthead,
     .mastfoot,
     .cover-container {
         width: 100%;
@@ -179,7 +117,6 @@ body {
 }
 
 @media (min-width: 62em) {
-    .masthead,
     .mastfoot,
     .cover-container {
         width: 42rem;
