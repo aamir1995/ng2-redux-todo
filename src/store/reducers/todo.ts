@@ -1,4 +1,3 @@
-import { stat } from 'fs';
 import { TodoActions } from '../actions/todo';
 interface IInitalState {
     todo: Object;
