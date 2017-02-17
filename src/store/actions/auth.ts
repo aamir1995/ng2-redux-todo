@@ -16,27 +16,24 @@ export class AuthActions {
 
     static NULL: string = 'NULL';
 
-    constructor(
-        private ngRedux: NgRedux<IAppState>,
-        private af: AngularFire
-    ) {
+    constructor(private ngRedux: NgRedux<IAppState>, private af: AngularFire) {
         this.ngRedux.dispatch({
             type: AuthActions.ISLOGGEDIN
         });
-    }
+    };
 
     register(user: Object): void {
         this.ngRedux.dispatch({
             type: AuthActions.REGISTER,
             payload: user
         });
-    }
+    };
 
     login(credentials): void {
         this.ngRedux.dispatch({
             type: AuthActions.LOGIN,
             payload: credentials
         });
-    }
+    };
 
 }

@@ -3,8 +3,8 @@
         <h3 class="masthead-brand">Things-TODO</h3>
         <nav class="nav nav-masthead">
             <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-            <a class="nav-link" routerLink="/signin" routerLinkActive="active">Login</a>
-            <a class="nav-link" routerLink="/signup" routerLinkActive="active">Register</a>
+            <a class="nav-link" [routerLink]="['/auth', 'login']" routerLinkActive="active">Login</a>
+            <a class="nav-link" [routerLink]="['/auth', 'register']" routerLinkActive="active">Register</a>
         </nav>
     </div>
 </div>

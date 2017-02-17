@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   template: require('./signin.html'),
   styles: [require("./signin.scss")]
 })
-export class SigninContainer implements OnInit {
+export class SigninContainer {
 
   constructor(private router: Router) {
   }

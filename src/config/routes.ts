@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { Containers, HomeContainer, SigninContainer, SignupContainer, RootContainer } from '../containers';
+import { Containers, HomeContainer, SigninContainer, SignupContainer, RootContainer, AuthContainer } from '../containers';
 import { Components } from "../components";
 
 // import AuthGuard service which will help to prevent users from entering homepage without authentication
@@ -11,6 +11,7 @@ export const AppRoutes: Routes = [
   , { path: "home", component: HomeContainer }
   , { path: "signin", component: SigninContainer }
   , { path: "signup", component: SignupContainer }
+  , { path: "auth/:id", component: AuthContainer }
   , {
     path: "",
     component: RootContainer,
